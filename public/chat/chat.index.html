@@ -1,0 +1,56 @@
+<div ng-controller="chatCtrl as cc" ng-init="cc.getUsers()" class="chat">
+    <div class="main-panel">
+        <div class="online-user">
+            <ul>
+                <li ng-repeat="ul in cc.userList">{{ul}}</li>
+            </ul>
+        </div>
+        <div class="online-chatbox">
+            <div id="chatBox" class="msg-chatbox">
+                <div ng-repeat="bud in cc.chatList">
+                    <div class="chatbud" ng-class="bud.self?'chatbud-right':'chatbud-left'" >
+                        <div ng-class="bud.self?'chatbud-username-self':'chatbud-username'">{{bud.user}}</div>
+                        <div class="chatbud-text">{{bud.text}}</div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>                
+            </div>
+            <input 
+                class="input-chatbox" 
+                type="text" 
+                id="text"
+                ng-model="cc.text"  
+                ng-keypress="cc.sendText($event)"
+                ng-disabled="cc.lockText"
+                placeholder="Say Hello...!"
+            >
+        </div>
+    </div>
+    <div class="chatbar">
+        <div class="user">Hi {{cc.user}}</div>
+        <button ng-click="cc.logOut()" class="logout">LOG OUT</button>
+    </div>
+
+    <!--<div class="box-private" >
+        <div class="online-chatbox-private" ng-repeat="pcl in cc.pChatList">
+            <div id="chatBox" class="msg-chatbox">
+                <div ng-repeat="bud in cc.chatList">
+                    <div class="chatbud" ng-class="bud.self?'chatbud-right':'chatbud-left'" >
+                        <div ng-class="bud.self?'chatbud-username-self':'chatbud-username'">{{bud.user}}</div>
+                        <div class="chatbud-text">{{bud.text}}</div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>                
+            </div>
+            <input 
+                class="input-chatbox" 
+                type="text" 
+                id="text"
+                ng-model="cc.text"  
+                ng-keypress="cc.sendText($event)"
+                ng-disabled="cc.lockText"
+                placeholder="Say Hello...!"
+            >
+        </div>
+    </div>-->
+</div>

@@ -1,0 +1,20 @@
+<div ng-controller="registrationCtrl as rc" class="registration" >
+    <div class="flex-container">
+        <div class="login-panel" align="center">
+            <form class="box">
+                <div class="brand">Connect to people!</div>
+                <input 
+                    placeholder="CHOOSE USERNAME" 
+                    class="form-control" 
+                    type="text" 
+                    name="username" 
+                    id="username"
+                    ng-model="rc.username"
+                    ng-keypress="rc.checkUsername($event)"
+                    ng-disabled="rc.lockUsername"
+                >
+                <div ng-class="rc.errorClass">{{rc.errorMessage}}</div>
+            </form>
+        </div>
+    </div>
+</div>

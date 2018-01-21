@@ -1,0 +1,173 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+nav{
+	position: fixed;
+	height: 10vh;
+	width: 100%;
+	background-color: black;
+    top:0px;
+}
+
+.clearfix{
+    clear: both;
+}
+.brand{
+    font-size: 2em;
+    font-weight: bolder;
+    flex: 1;
+    padding: 5px;
+    color:white;
+    line-height:50px;
+}
+
+.user{
+    float: left;
+    color: #efefef;
+    font-weight: bolder;
+    line-height: 6vh;
+    font-size: 1.1em;
+    padding: 3px;
+}
+
+.logout{
+    float: right;
+    line-height: 6vh;
+    background-color: #efefef;
+    cursor: pointer;
+}
+
+.error-success{
+    color: #00df00;
+    margin-top: 5px;
+}
+.error-failure{
+    color: #df0000;
+    margin-top: 5px;
+}
+/*registarion.index.html*/
+
+.registration .flex-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.registration .login-panel{
+    flex: 1; 
+}
+.registration .box{
+    width: 35%;
+    background-color: #efefef;
+    border-radius: 7px;
+    padding: 11px;
+}
+
+.registration .brand{
+    font-size: larger;
+    font-weight: bolder;
+    color: black;
+    padding: 10px;
+}
+.registration .form-control{
+    padding: 8px;
+    line-height: 2px;
+    text-align: center;
+    
+}
+
+
+/*chat.index.html*/
+.chat .main-panel{
+    margin-top: 10vh;
+    display: block;
+    height: 83vh;
+    width:100%;
+}
+.chat .chatbar{
+    height: 7vh;
+    background-color: black;
+}
+.chat .online-user{
+    display: block;
+    overflow-y: scroll;
+    float: left;
+    width: 25%;
+    height: inherit;
+    background-color: #dfdfdf;
+}
+
+.chat .online-user ul{
+    padding: 0px;
+    margin: 0px;
+}
+.chat .online-user ul li{
+    list-style: none;
+    background-color: #ffffff;
+    border-bottom: solid 1px #999999;
+    border-right: solid 1px #efefef;
+    font-size: 1.4em;
+    line-height: 50px;
+    cursor: pointer;
+    padding: 7px;
+    height: 50px;
+}
+
+.chat .online-chatbox{
+    display: block;
+    float: left;
+    width: 75%;
+    height: inherit;
+    background-color: #efefef;
+}
+
+.chat .msg-chatbox{
+    height: calc(100% - 50px);
+    overflow-y: scroll;
+}
+.chat .input-chatbox{
+    height: 50px;
+    width: 100%;
+    padding: 8px;
+    font-size: 1.2em;
+}
+.chat .chatbud{
+    display: block;
+    padding: 5px;
+    margin:5px;
+    background-color: #dfdfdf;
+    border-radius: 11px;
+    max-width:70%;
+}
+.chat .chatbud-left{
+    float: left;
+}
+.chat .chatbud-right{
+    float: right;
+}
+.chat .chatbud-username{
+    font-size: small;
+}
+.chat .chatbud-text{
+    margin-top: 2px;
+}
+.chat .chatbud-username-self{
+    display: none;
+}
+
+/*private*/
+.box-private{
+    position: absolute;
+    bottom: 0px;
+}
+.online-chatbox-private{
+    display: inline-block;
+    margin: 5px;
+    z-index: 999;
+    width:300px;
+    height: 300px;
+    border: 2px solid black;
+}
